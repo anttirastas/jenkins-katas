@@ -3,10 +3,10 @@ pipeline {
   stages {
     stage('clone down') {
         agent {
-            label 'host'
+          label 'host'
         }
         steps {
-            stash excludes: '.git', name: 'code'
+          stash excludes: '.git', name: 'code'
         }
     }
     stage('Parallel execution') {
@@ -57,7 +57,7 @@ pipeline {
   }
   post {
     always {
-        deleteDir() /* clean up our workspace */
+      deleteDir() /* clean up our workspace */
     }
   }
 }
