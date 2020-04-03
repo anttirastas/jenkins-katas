@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    DOCKERCREDS = credentials('docker_hub')
+    docker_username = 'anttirastas'
   }
   stages {
     stage('clone down') {
